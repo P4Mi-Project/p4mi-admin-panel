@@ -13,7 +13,8 @@
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-loading-screen": "^0.0.17"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
