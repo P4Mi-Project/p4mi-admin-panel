@@ -3,6 +3,7 @@ import  "bootstrap/dist/css/bootstrap.min.css"
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 
+
 const Login = ()=> {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -10,7 +11,6 @@ const Login = ()=> {
     const submitLoginBtn =(e:FormEvent<HTMLInputElement>):void => {
         e.preventDefault()
         alert("Success login!!")
-
     }
 
     return (

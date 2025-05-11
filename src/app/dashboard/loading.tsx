@@ -1,9 +1,10 @@
-import LoadingScreen from 'react-loading-screen';
+// import LoadingScreen from 'react-loading-screen';
 
 
 const Loading = ()=> {
     return (
-        <LoadingScreen/>
+        // <LoadingScreen/>
+        <></>
     )
 }
 
