@@ -11,6 +11,8 @@ const Login = ()=> {
     const submitLoginBtn =(e:FormEvent<HTMLInputElement>):void => {
         e.preventDefault()
         alert("Success login!!")
+        console.log(email.length)
+        console.log(password.length)
     }
 
     return (
