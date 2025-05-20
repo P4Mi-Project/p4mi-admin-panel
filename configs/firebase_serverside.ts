@@ -5,6 +5,6 @@ import { Auth, getAuth } from 'firebase-admin/auth';
 
 let app = initializeApp({credential: cert(serviceAccount)}) 
 const firestore:Firestore = getFirestore()
-const auth:Auth = getAuth()
-export {firestore,auth}
+const _auth:Auth = getAuth()
+export {firestore,_auth}
 

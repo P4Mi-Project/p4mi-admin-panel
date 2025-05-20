@@ -13,7 +13,8 @@ export async function GET(request : Request) {
         console.log(item.id, item.data())
     })
     const userList = await auth.getUsers
-    const users = (await userList).users;
+    const users = await userList
+    
     users.forEach ((item) => {
         console.log(item)
     })

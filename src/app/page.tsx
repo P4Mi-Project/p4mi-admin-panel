@@ -1,9 +1,19 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+
+import { useState } from "react";
+import GlobalContext from "./GlobalContext";
 
 export default function Home() {
+    const [isOpen, setIsOpen] = useState();
+
   return (
-    <div className={styles.page}>
+    <GlobalContext.Provider value = {{isOpen}}>
+      Hello world this is the root page
+    </GlobalContext.Provider>
+  );
+}
+
+{/* <div className={styles.page}>
       <main className={styles.main}>
         <Image
           className={styles.logo}
@@ -90,6 +100,4 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
-  );
-}
+    </div> */}

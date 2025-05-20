@@ -1,12 +1,22 @@
 "use client"
 import  "bootstrap/dist/css/bootstrap.min.css"
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 
 const Login = ()=> {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const persistedState = useRef({})
+
+    useEffect(()=> {
+        // doing this to make sure that the form data does not go away upon refreshing.
+        // I might remove this section later based on the practicality of the implication.
+        persistedState.current = {
+            "email": email,
+            "password": password
+        }
+    },[email,password])
 
     const submitLoginBtn =(e:FormEvent<HTMLInputElement>):void => {
         e.preventDefault()
